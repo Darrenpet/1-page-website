@@ -114,64 +114,58 @@ body {
 /* Section 2 */
 
 .section-slide--section2 {
-  background: cyan;
-  color: darkblue;
+  background: rgb(140, 0, 255);
+  color: rgb(0, 255, 0);
   position: relative;
   display: block;
   box-sizing: border-box;
 }
 
-.section2 {
-  pointer-events: none;
-  min-height: 486px;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  width: 940px;
+.parent1 {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.box1 h3 {
+  font-weight: 400;
+  background-image: none;
+  font-size: 1.875rem;
+  margin: 0 auto 0 0;
+  font-family: Oswald, sans-serif;
+}
+
+.box1-contain {
   position: relative;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.section2-1 {
-  pointer-events: initial;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  flex-shrink: 0;
-  width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.section2-layout {
-  box-sizing: border-box;
-}
-
-.section2-layout-row {
-  flex-direction: row;
-  flex-wrap: wrap;
-  min-height: 100%;
+  flex: 1;
   max-width: 100%;
-  display: flex;
-  box-sizing: border-box;
+  padding: 30px;
 }
 
-.section2-layout-container {
-  min-height: 383px;
-  opacity: 1 !important;
-  text-align: left;
-  flex: 0 0 50%;
-  max-width: 50%;
-  min-width: 50%;
-  background-color: transparent !important;
+.box2-contain {
   position: relative;
-  display: flex;
-  background-clip: padding-box;
-  background-origin: padding-box;
-  max-height: 100%;
-  box-sizing: border-box;
+  flex: 1;
+  max-width: 100%;
+  padding: 30px;
+}
+
+.image-man-radio {
+  border-radius: 50%;
+}
+
+.box2 h3 {
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 36px auto 0 0;
+}
+
+.line {
+  width: 200px;
+  border-right-width: 0;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  border-style: solid;
 }
 
 /* Section 3 */
@@ -246,8 +240,8 @@ body {
 }
 
 /*
- * Just a quick hamburger
- */
+   * Just a quick hamburger
+   */
 #menuToggle span {
   display: block;
   width: 33px;
@@ -275,9 +269,9 @@ body {
 }
 
 /* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
@@ -285,24 +279,24 @@ body {
 }
 
 /*
- * But let's hide the middle one.
- */
+   * But let's hide the middle one.
+   */
 #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 /*
- * Ohyeah and the last one should go the other direction
- */
+   * Ohyeah and the last one should go the other direction
+   */
 #menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
 /*
- * Make this absolute positioned
- * at the top left of the screen
- */
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
 #menu {
   position: absolute;
   width: 300px;
@@ -327,8 +321,8 @@ body {
 }
 
 /*
- * And let's slide it in from the left
- */
+   * And let's slide it in from the left
+   */
 #menuToggle input:checked ~ ul {
   transform: none;
 }
